@@ -1,0 +1,21 @@
+name: xTpa
+author: xPlugins
+website: https://xplugins.es
+version: v1.0.0
+main: es.xplugins.xtpa.xTpa
+api-version: 1.16
+
+commands:
+  tpa:
+    description: Envia una solicitud de teletransporte a un jugador.
+    usage: /<command> <jugador>
+  tpaccept:
+    description: Acepta una solicitud de teletransporte.
+    usage: /<command>
+  tpdeny:
+    description: Deniega una solicitud de teletransporte.
+    usage: /<command>
+  xtpa:
+    description: Comando principal del plugin.
+    usage: /<command> [reload]
+    aliases: [tpaadmin]

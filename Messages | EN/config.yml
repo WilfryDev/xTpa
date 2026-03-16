@@ -1,0 +1,109 @@
+#         _____
+# __  _/__   \_ __   __ _
+# \ \/ / / /\/ '_ \ / _` |
+#  >  < / /  | |_) | (_| |
+# /_/\_\\/   | .__/ \__,_|
+#            |_/
+# https://xplugins.es/plugins/xtpa
+# https://xplugins.es/discord
+
+# Settings
+settings:
+  tpa-timeout-seconds: 60
+  cooldown-seconds: 15
+  teleport-delay-seconds: 3
+  teleport-move-cancel: true
+  center-messages: false
+
+# Permissions
+# "default" = No permission required.
+permissions:
+  tpa: "default"
+  tpaccept: "default"
+  tpdeny: "default"
+  bypass-cooldown: "xtpa.bypass.cooldown"
+  bypass-delay: "xtpa.bypass.delay"
+  admin: "xtpa.admin"
+
+# Editable sounds.
+sounds:
+  received-tpa:
+    enabled: true
+    sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+    volume: 1.0
+    pitch: 1.0
+  teleport-start:
+    enabled: true
+    sound: "BLOCK_NOTE_BLOCK_HARP"
+    volume: 0.5
+    pitch: 1.5
+  teleport-success:
+    enabled: true
+    sound: "ENTITY_ENDERMAN_TELEPORT"
+    volume: 1.0
+    pitch: 1.0
+
+# Extra | Visuals
+visuals:
+  title:
+    enabled: false
+    title: "&#FAEDCB ℹ Request Received!"
+    subtitle: "&f%xtpa_player% wants to teleport"
+    fade-in: 10
+    stay: 60
+    fade-out: 10
+  actionbar:
+    enabled: true
+    message: "&fHey! &#FAEDCB&n%xtpa_player%&f has sent you a TPA! Check your chat."
+
+# Message system
+messages:
+  prefix: ""
+
+  no-permission: "&c ✘ Error! &fYou do not have permission to execute this command."
+  player-not-found: "&c ✘ &fThat player is not online or does not exist."
+  cooldown: "&#FF5252 ✘ Error! &fYou must wait &e%xtpa_time%s &fbefore sending another TPA."
+  self-tpa: "&#FF5252 ✘ Error! &fYou cannot send a TPA request to yourself."
+
+  tpa-sent: "&#A0FF91 ✔ Success! &fThe request has been sent to &e%xtpa_player%&f."
+  tpa-no-pending: "&#FAEDCB ℹ Info! &fYou don't have any pending requests at this moment."
+  tpa-expired: "&#FAEDCB ℹ Info! &fThe teleport request has expired."
+
+  tpa-denied-target: "&#A0FF91 ✔ Success! &fYou have denied the teleport request."
+  tpa-denied-sender: "&#FF5252 ✘ Error! &fPlayer &e%xtpa_player% &fhas denied your request."
+
+  tpa-accepted-target: "&#A0FF91 ✔ Success! &fThe teleport request has been accepted."
+  tpa-accepted-sender: "&#A0FF91 ✔ Success! &fPlayer &e%xtpa_player% &fhas accepted your teleport."
+  teleport-starting-sender: "&#A0FF91 ✔ Success! &fYou are being teleported to &e%xtpa_player%&f."
+  teleport-delay-notice-sender: "&#FAEDCB ℹ Info! &fYou will be teleported in %xtpa_time% seconds. Please do not move."
+
+  teleport-cancelled-moved: "&#FF5252 ✘ Error! &fMovement detected! Teleportation has been cancelled."
+  teleport-cancelled-quit: "&#FF5252 ✘ Error! &fThe player has disconnected. Teleportation cancelled."
+  teleport-success-sender: "&#A0FF91 ✔ Success! &fYou have been successfully teleported."
+
+  received-request:
+    line1: "&#FAEDCB ℹ Info! &fPlayer &#FAEDCB%xtpa_player% &fhas requested to teleport to you."
+    line2-accept: "&fType &a/tpaccept &fto accept the teleport."
+    line3-deny: "&fTo deny the teleport, type &c/tpdeny&f."
+    line4: "&#FAEDCB ℹ Info! &fThe request will be automatically cancelled after %xtpa_time% seconds."
+    hover-accept: "&#A0FF91Click here to ACCEPT!"
+    hover-deny: "&cClick here to DENY!"
+
+help:
+  admin:
+    - ""
+    - " &fAdministrator Commands &#FAEDCB&lxTPA"
+    - ""
+    - "&8| &#A0FF91/tpa <player> &8- &fSends a request"
+    - "&8| &#A0FF91/tpaccept &8- &fAccepts the request"
+    - "&8| &#A0FF91/tpdeny &8- &fDenies the request"
+    - "&8| &#A0FF91/xtpa reload &8- &fReloads the configuration"
+    - ""
+
+  user:
+    - " "
+    - "     &f✔ &#FAEDCB&lCOMMAND &fHelp &7(/tpa)"
+    - " &fSends a teleport request to the"
+    - "&f specified player to perform the TP."
+    - "        &8- &#FAEDCB/tpa <player>"
+    - " "
